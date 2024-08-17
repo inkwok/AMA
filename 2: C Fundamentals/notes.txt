@@ -1,0 +1,124 @@
+/* This is a comment. */
+// This is also a comment.
+
+// f(x) = x + 1
+double
+f(double x)
+{
+    return x + 1;
+}
+
+// g(x) = x^2 + y^2
+double
+g(double x, double y)
+{
+    return x * x + y * y;
+}
+
+/*
+ * Variables have a type which should always be known at compile time.
+ * FP: double, float
+ * INT: int, long
+ * char
+ * void
+ * bool (only with stdbool.h)
+ *
+ * A variable can also be a pointer, denoted with (*) at the end of the type.
+ * Pointers are hardware addresses, and using them can lead to undefined behavior.
+ */
+
+double* my_pointer_to_double;
+//Variables can be declared and assigned at the same time.
+int baz = 0;
+
+//Some variables are used as part of convention. (i) is almost always in loops.
+
+/*
+ * Format Specifiers
+ * --------------
+ * char          | c
+ *               |
+ * int           | d
+ * long          | ld
+ * unsigned int  | u
+ * unsigned long | lu
+ *               |
+ * float         | f
+ * double        | lf
+ * long double   | Lf
+ *               |
+ * string        | s
+ * pointer       | p
+ * scientific    | e
+ *               |
+ * octal         | o
+ * hex           | x
+ * --------------
+ */
+
+int foo = 2;
+char* bar = "Two";
+printf("%d, %s\n", foo, bar); //linter will scream here for some reason
+
+
+
+C Operator Precedence
+
+1: LR
+Postfix increment and decrement
+Function call
+Array subscripting
+Struct or union member access
+Struct or union member access by pointer
+Compound literal
+
+2: RL
+Prefix increment and decrement
+Unary plus and minus
+Logical and bitwise NOT
+Typecast
+Dereference
+Address-of
+sizeof
+
+3: LR
+Multiplication, division, and modulo
+
+4: LR
+Addition and subtraction
+
+5: LR
+Bitwise shifts
+
+6: LR
+Relational operators (<=, >=, <, >)
+
+7: LR
+Relational operators (==, !=)
+
+8 - 10: LR
+Bitwise AND, XOR, OR
+
+11, 12: LR
+Logical AND, OR
+
+13: RL
+Ternary conditional
+
+14: RL
+Simple assignment
+Assignment by sum and difference
+Assignment by product, quotient, and remainder
+Assignment by bitwise shifts
+Assignment by bitwise AND, XOR, OR
+
+15: LR
+Comma
+
+*******Associativity is a fancy word for order of parsing.******************************
+
+LR Associativity: a + b + c is parsed as (a + b) + c
+RL Associativity: a = b = c is parsed as a = (b = c)
+
+RL Associativity: a = 12 is legal because the assignment operator is right-left associative.
+                  12 = a is not legal because the compiler expects a literal on the right and an identifier on the left.

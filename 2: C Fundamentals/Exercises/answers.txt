@@ -1,0 +1,43 @@
+1: [program helloworld]
+2:
+(a) There is one directive, on line 1: #include <stdio.h>
+(b) The program will produce the following:
+[foo@bar:~]$ ./program
+Parkinson's Law:
+Work expands so as to fill the time
+available for its completion.
+[foo@bar:~]$
+
+3-4: [programs dweight, and dweight_change]
+
+5:
+100_bottles is the only illegal identifier because an identifier cannot begin with a number.
+
+6:
+It may be unclear how many underscores there are if more than one is used. It may also
+resemble a library function identifier, which can be misleading and/or hard to debug.
+
+7:
+(b) is not a keyword because it is capitalized
+(d) is a standard library function
+
+8 & 9:
+answer = (3 * q - p * p) / 3;
+    1.  identifier
+    2.  operator (14th priority)
+    3.  open parenthesis
+    4.  literal
+    5.  operator (3rd priority)
+    6.  identifier
+    7.  operator (4th priority)
+    8.  identifier
+    9.  operator (3rd priority)
+    10. identifier
+    11. close parenthesis
+    12. operator
+    13. literal
+    14. end of line
+There are 14 tokens.
+
+10:
+Spaces between identifiers, and spaces between keywords matter. The assignment operator does not need spaces.
