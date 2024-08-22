@@ -1,8 +1,8 @@
 1.
 (a) produces "    86,1040"
-(b) produces "          30.25300"
+(b) produces " 3.02530e+01"
 (c) produces "83.1620"
-(d) produces "9.979e-7"
+(d) produces "1e-06"
 
 2. program
-3.
+3. 
