@@ -4,5 +4,40 @@
 (c) produces "83.1620"
 (d) produces "1e-06"
 
-2. program
-3. 
+2. skipped this one (COME BACK)
+3. (a) both calls will write an int, but 
+       the right example will consume whitespace 
+       characters before the format identifier.
+
+   (b) the left example will accept
+       999-999-999
+       
+       the right example can consume the above
+       input, as well as
+       999 -999 -999
+       or any number of whitespaces.
+
+   (c) the right example can consume any number 
+       of whitespaces after the format identifier.
+
+   (d) the left example will accept
+       2.2,2.2
+
+       the right example can consume the above
+       input, as well as
+       2.2, 2.2
+       or any number of whitespaces.
+4. the values will be as follows:
+    i: 10
+    x: 0.3
+    j: 5
+    scanf searches for an int, and will terminate at
+    the first alphabetical character it reads. it
+    consumes the 10, and leaves the .3 for the next
+    read cycle of scanf.
+5. the values will be as follows:
+    x: 12.3
+    i:45
+    y: .6
+    same justification as above.
+
