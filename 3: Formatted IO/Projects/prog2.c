@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-struct Item
+struct 
+Item
 {
     int no;
     float price;
